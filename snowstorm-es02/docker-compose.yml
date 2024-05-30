@@ -9,7 +9,7 @@ services:
       - cluster.name=snowstorm-cluster
       - cluster.initial_master_nodes=snowstorm-es01,snowstorm-es02,snowstorm-es03
       - discovery.seed_hosts=snowstorm-es01,snowstorm-es03
-      - 'ES_JAVA_OPTS=-Xms4g -Xmx4g'
+      - 'ES_JAVA_OPTS=-Xms2g -Xmx2g'
     volumes:
       - snowstorm-es02-vol:/usr/share/elasticsearch/data
     networks:
