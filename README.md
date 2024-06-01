@@ -29,21 +29,21 @@ docker ps -a
 ```
 
 ```bash
-docker compose -f snowstorm-es01/docker-compose.yml up -d
+docker-compose -f snowstorm-es01/docker-compose.yml up -d
 ```
 
 ```bash
-docker compose -f snowstorm-es02/docker-compose.yml up -d
+docker-compose -f snowstorm-es02/docker-compose.yml up -d
 ```
 
 ```bash
-docker compose -f snowstorm-es03/docker-compose.yml up -d
+docker-compose -f snowstorm-es03/docker-compose.yml up -d
 ```
 
 #### 4. Deploy read & write Snowstorm terminology server & SNOMED CT browser
 
 ```bash
-docker compose -f snowstorm-write-browser/docker-compose.yml up -d
+docker-compose -f snowstorm-write-browser/docker-compose.yml up -d
 ```
 
 - Browse to http://your-server-ip:5000 for Snowstorm Swagger API and upload your RF2 file following this docs https://github.com/IHTSDO/snowstorm/blob/master/docs/loading-snomed.md#via-rest
@@ -72,7 +72,7 @@ docker service update --network-add <your-application-network> snowstorm-server
 #### 6. Remove read & write Snowstorm terminology server & SNOMED CT browser
 
 ```bash
-docker compose -f snowstorm-write-browser/docker-compose.yml down -v
+docker-compose -f snowstorm-write-browser/docker-compose.yml down -v
 ```
 
 - -v flag here is to remove anonymous volume that snowstorm-server-write create
