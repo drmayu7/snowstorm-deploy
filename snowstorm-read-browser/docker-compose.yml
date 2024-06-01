@@ -14,13 +14,13 @@ services:
     container_name: snowstorm-browser
     restart: unless-stopped
     depends_on:
-      - snowstorm-server-write
+      - snowstorm-server-read
     links:
-      - snowstorm-server-write
+      - snowstorm-server-read
     networks:
       - snowstorm-network
     environment:
-      - API_HOST=http://snowstorm-server-write:8080/
+      - API_HOST=http://snowstorm-server-read:8080/
     ports:
       - 9090:80
 
