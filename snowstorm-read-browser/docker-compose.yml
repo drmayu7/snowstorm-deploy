@@ -26,5 +26,5 @@ services:
 
 networks:
   snowstorm-network:
-    name: snowstorm-network
+    name: snowstorm-network-read
     external: true
